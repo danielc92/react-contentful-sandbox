@@ -28,7 +28,13 @@
     "codegen": "contentful-typescript-codegen --output src/schema/generated/contentful.d.ts"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "plugins": [
+      "prettier"
+    ],
+    "extends": "react-app",
+    "rules": {
+      "prettier/prettier": "error"
+    }
   },
   "browserslist": {
     "production": [
@@ -43,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.1"
   }
 }
